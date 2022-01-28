@@ -12,11 +12,4 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
-    @Test
-    public void markDownTest1() throws IOException {
-        Path fileName = Path.of("file-with-no-link.md");
-        String contents = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of(), links);
-    }
 }
