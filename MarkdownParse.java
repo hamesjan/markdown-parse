@@ -20,8 +20,13 @@ public class MarkdownParse {
                 break;
             }
             if (nextCloseBracket + 1 == openParen) {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
+                if (openParen + 1 != closeParen) {
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
             }
+
+            // makes sure that there is text inside the parentheses and that an empty string
+            // isn't added to the list
             currentIndex = closeParen + 1;
         }
         return toReturn;
