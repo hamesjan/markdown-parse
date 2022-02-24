@@ -33,6 +33,8 @@ public class MarkdownParse {
                 }
             }
 
+            // trying
+
             // makes sure that there is text inside the parentheses and that an empty string
             // isn't added to the list
             currentIndex = closeParen + 1;
